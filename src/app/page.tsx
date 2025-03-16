@@ -2,14 +2,9 @@
 
 import Header from '../components/Header'
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 import { BsGithub, BsLinkedin, BsTwitter } from 'react-icons/bs'
 import { HiArrowDown } from 'react-icons/hi'
-
-const fadeInUp = {
-  initial: { opacity: 0, y: 20 },
-  animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.5 }
-}
 
 const stats = [
   { number: '5+', label: 'Years Experience' },
@@ -22,13 +17,13 @@ export default function Home() {
   return (
     <main>
       <Header />
-      
+
       {/* Hero Section */}
       <section className="min-h-screen relative overflow-hidden">
         {/* Background Effects */}
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-900/20 to-transparent"></div>
         <div className="absolute inset-0 bg-grid-white/[0.02] bg-[size:50px_50px]"></div>
-        
+
         <div className="container mx-auto px-4 pt-40 pb-20 relative">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -45,12 +40,12 @@ export default function Home() {
             >
               <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 blur-2xl opacity-30 animate-pulse"></div>
               <div className="relative w-full h-full rounded-full border-2 border-gray-700 overflow-hidden">
-                <div className="w-full h-full bg-gradient-to-r from-blue-500 to-purple-500"></div>
+                <div className="w-full h-full bg-gradient-to-r from-blue-500 to-purple-500"><Image src="/profile.jpg" alt="Profile" fill /></div>
               </div>
             </motion.div>
 
             {/* Main Content */}
-            <motion.h1 
+            <motion.h1
               className="text-5xl md:text-7xl font-bold mb-6 tracking-tight"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -67,7 +62,7 @@ export default function Home() {
               </motion.span>
             </motion.h1>
 
-            <motion.p 
+            <motion.p
               className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -77,28 +72,28 @@ export default function Home() {
             </motion.p>
 
             {/* Social Links */}
-            <motion.div 
+            <motion.div
               className="flex justify-center gap-6 mb-12"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
             >
-              <a href="https://github.com/Navidreza80" target="_blank" rel="noopener noreferrer" 
+              <a href="https://github.com/Navidreza80" target="_blank" rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white transition-colors">
                 <BsGithub size={24} />
               </a>
-              <a href="#" target="_blank" rel="noopener noreferrer" 
+              <a href="#" target="_blank" rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white transition-colors">
                 <BsLinkedin size={24} />
               </a>
-              <a href="#" target="_blank" rel="noopener noreferrer" 
+              <a href="#" target="_blank" rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white transition-colors">
                 <BsTwitter size={24} />
               </a>
             </motion.div>
 
             {/* CTA Buttons */}
-            <motion.div 
+            <motion.div
               className="flex flex-col sm:flex-row justify-center gap-4 mb-16"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -113,7 +108,7 @@ export default function Home() {
             </motion.div>
 
             {/* Stats */}
-            <motion.div 
+            <motion.div
               className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-3xl mx-auto"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -136,7 +131,7 @@ export default function Home() {
         </div>
 
         {/* Scroll Indicator */}
-        <motion.div 
+        <motion.div
           className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 1.5, repeat: Infinity }}
@@ -155,7 +150,7 @@ export default function Home() {
             transition={{ duration: 0.5 }}
             className="max-w-4xl mx-auto"
           >
-            <motion.h2 
+            <motion.h2
               className="text-3xl md:text-4xl font-bold text-center mb-4"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -163,7 +158,7 @@ export default function Home() {
             >
               <span className="gradient-text">Tech Stack</span>
             </motion.h2>
-            <motion.p 
+            <motion.p
               className="text-gray-400 text-center mb-12"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
